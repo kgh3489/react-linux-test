@@ -5,9 +5,10 @@ import axios from "axios";
 import { useState } from "react";
 
 function App() {
+  axios.defaults.baseURL = "http://192.168.0.14:5000";
   const [users, setUsers] = useState([]);
   const getUsers = async() => {
-    const {data} = await axios.get("http://192.168.0.14:5000/user")
+    const {data} = await axios.get("/user")
     setUsers(data);
   };
 
