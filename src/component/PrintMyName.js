@@ -1,8 +1,5 @@
-import { useState } from "react"
-
-const PrintMyName = () => {
-    const [name, setName] = useState("리오넬 메시");
-        return <p>{name}</p>
+import { useState } from "react";
+const PrintMyName = ({ name }) => {
+  return <p>{name}</p>;
 };
-
 export default PrintMyName;
